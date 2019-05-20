@@ -33,10 +33,10 @@ export default class ProfileHome extends Component {
         {
           this.state === null || this.state === undefined ? <div>Loading Shows....</div>
             :
-            _.map(this.state, (value) =>
+            _.map(this.state, (value,i) =>
               value.categories !== "off-broadway"
                 ?
-                <div>
+                <div key={i}>
                   <div>{value.title}</div>
                   <img
                     src={value.content}
