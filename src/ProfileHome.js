@@ -3,7 +3,7 @@ import axios from "axios";
 import { data } from "./data";
 import _ from 'lodash';
 
-const url = "http://reduxblog.herokuapp.com/api/posts/?key=BOBO1234";
+const url = "https://reduxblog.herokuapp.com/api/posts/?key=BOBO12345";
 
 
 export default class ProfileHome extends Component {
@@ -37,13 +37,15 @@ export default class ProfileHome extends Component {
               value.categories !== "off-broadway"
                 ?
                 <div key={i}>
-                  <div>{value.title}</div>
+                  <div >{value.title}</div>
                   <img
+          
                     src={value.content}
+                    alt={`${value.title}`}
                   />
                 </div>
                 :
-                <div />
+                <div key={i}/>
             )
         }
       </div>
